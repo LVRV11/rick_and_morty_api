@@ -26,7 +26,7 @@ class PersonLocalDataSourceImpl implements PersonLocalDataSource {
     final jsonPersonsList =
         sharedPreferences.getStringList(CACHED_PERSONS_LIST);
     if (jsonPersonsList!.isNotEmpty) {
-      print('Get Person from Cache: ${jsonPersonsList.length}');
+      print('Get Perso shado from Cache: ${jsonPersonsList.length}');
       return Future.value(jsonPersonsList
           .map((person) => PersonModel.fromJson(json.decode(person)))
           .toList());
